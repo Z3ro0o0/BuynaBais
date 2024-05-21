@@ -94,7 +94,7 @@ class CartSerializer(serializers.ModelSerializer):
             "id": instance.id,
             "size": instance.size,
             "quantity": instance.quantity,
-            "user": 2,
+            "user": instance.user.id,
             "product": instance.product.id,
             "product_name" : instance.product.product_name,
             "price" : instance.product.price
