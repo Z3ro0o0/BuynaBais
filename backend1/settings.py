@@ -14,6 +14,8 @@ SECRET_KEY = 'django-insecure-if5ftc6)#c!m)2h6!_8jw9r0j2at$-(h!43aqmowqeloclk@*k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+DOMAIN = ('https://web-buyna-bai.vercel.app/')
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -137,7 +139,7 @@ REST_FRAMEWORK = {
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
     'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
-    'ACTIVATION_URL': '/activate/{uid}/{token}',
+    'ACTIVATION_URL': 'activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {
         'user_create': 'app.serializers.CustomUserCreateSerializer',
