@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-if5ftc6)#c!m)2h6!_8jw9r0j2at$-(h!43aqmowqeloclk@*k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-DOMAIN = ('https://web-buyna-bai.vercel.app/')
+DOMAIN = ('web-buyna-bai.vercel.app')
 
 ALLOWED_HOSTS = ['*']
 
