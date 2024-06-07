@@ -82,7 +82,11 @@ class Checkout(models.Model):
     # def __str__(self):
     #     return f'{self.cart..id} - {self.order.id}'
 
-
+class MemberDetails(models.Model):
+    first_name = models.TextField(max_length=100)
+    last_name = models.TextField(max_length=100)
+    email = models.TextField(max_length=100)
+    course = models.TextField(max_length=100)
 
     
 

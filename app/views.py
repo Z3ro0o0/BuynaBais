@@ -1,6 +1,7 @@
 from rest_framework import status  # Add this import
-from .models import Product, Category, Cart, Review, Ewallet
-from .serializers import ProductSerializer, CategorySerializer, CartSerializer, CheckoutSerializer, OrderSerializer
+from .models import Product, Category, Cart, Review, Ewallet, MemberDetails
+from .serializers import ProductSerializer, CategorySerializer, CartSerializer, CheckoutSerializer, OrderSerializer, MemberDetailsSerializer
+    
 
 from django.http import JsonResponse
 from .serializers import CustomUserSerializer, ReviewSerializer, EwalletSerializer
@@ -100,3 +101,11 @@ class UserProductListView(generics.ListAPIView):
     def get_queryset(self):
         current_user = self.request.user
         return Product.objects.filter(user=current_user)
+    
+class MemberDetailsListView(generics.ListCreateAPIView):
+    queryset = MemberDetails.objects.all()
+    serializer_class = MemberDetailsSerializer
+
+class MemberDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = MemberDetails.objects.all()
+    serializer_class = MemberDetailsSerializer    

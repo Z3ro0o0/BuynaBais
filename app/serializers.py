@@ -6,7 +6,7 @@ from django.contrib.auth.password_validation import validate_password
 from django.core import exceptions as django_exceptions
 from django.core.validators import RegexValidator
 from rest_framework.settings import api_settings
-from .models import Product, Category, Cart, Review, Checkout, Ewallet, Order
+from .models import Product, Category, Cart, Review, Checkout, Ewallet, Order, MemberDetails
 
 User = get_user_model()
 
@@ -142,6 +142,11 @@ class CheckoutSerializer(serializers.ModelSerializer):
     class Meta:
         model = Checkout
         fields = '__all__'
+
+class MemberDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MemberDetails   
+        fields = '__all__'        
 
 
 
